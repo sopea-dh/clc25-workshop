@@ -19,6 +19,10 @@ kubectl apply -k steps/05-user-serving-plane/librechat/
 4. Install the LibreChat helm chart with the included `values.yaml` file
 
 ```bash
+# install Helm
+curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-4 | bash
+
+# install LibreChat
 helm install librechat oci://ghcr.io/danny-avila/librechat-chart/librechat --values steps/05-user-serving-plane/librechat/values.yaml --namespace librechat
 ```
 
