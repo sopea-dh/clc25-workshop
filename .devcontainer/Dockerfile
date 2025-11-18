@@ -17,9 +17,6 @@ RUN curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/s
 # Install flux CLI
 RUN curl -s https://fluxcd.io/install.sh | bash
 
-# Helm
-RUN curl -s curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
-
 # Install k9s
 RUN curl -sL https://github.com/derailed/k9s/releases/latest/download/k9s_Linux_amd64.tar.gz | tar xz -C /tmp \
     && mv /tmp/k9s /usr/local/bin/ \
